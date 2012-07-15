@@ -14,4 +14,3 @@ TODO
 ---
   * better support to reset functions
   * add customizable warning level
-  * create an helper method to update counter
