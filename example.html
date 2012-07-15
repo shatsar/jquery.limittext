@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jquery.limittext example</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="jquery.limittext.js"></script>
+	</head>
+	<body>
+		<h1>Basic example</h1>
+		<form>
+			<textarea id="message"> </textarea>
+		</form>
+		<p><span id="counter"> </span> chars remaining</p>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$('#message').limitText({
+			  		limit: 160,
+			   	 	counterId: "counter",
+			 	   	alertClass: "warning"
+				}); 
+			});
+			
+		</script>
+	</body>
+</html>
