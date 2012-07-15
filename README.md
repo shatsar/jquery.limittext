@@ -3,9 +3,9 @@ jQuery LimitText Plugin
 
 Simple plugin to limit the value of a textarea or text input updating at the same time a counter.
 
-	$('.reply').limitText({
+	$('#message').limitText({
   		limit: 160,
-   	 	counterId: "counter",
+   	 	counterSelector: "#counter",
  	   	alertClass: "warning"
 	}); 
 
