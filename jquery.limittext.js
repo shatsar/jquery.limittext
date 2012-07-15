@@ -9,7 +9,7 @@
 		return this.each(function() {
 			var characters = options.limit;
 			if (options.counterSelector != false) {
-				$(options.counterSelector).html(characters);
+				$(options.counterSelector).html(characters - $(this).val().length);
 			}
 			$(this).keyup(
 					function() {
