@@ -2,14 +2,14 @@
 	$.fn.limitText = function(options) {
 		var defaults = {
 			limit : 200,
-			counterId : false,
+			counterSelector : false,
 			alertClass : false
 		}
 		var options = $.extend(defaults, options);
 		return this.each(function() {
 			var characters = options.limit;
-			if (options.counterId != false) {
-				$("#" + options.counterId).html(characters);
+			if (options.counterSelector != false) {
+				$(options.counterSelector).html(characters);
 			}
 			$(this).keyup(
 					function() {
@@ -18,12 +18,12 @@
 						}
 						if (options.counterId != false) {
 							var remaining = characters - $(this).val().length;
-							$("#" + options.counterId).html(remaining);
+							$(options.counterSelector).html(remaining);
 							if (remaining <= 10) {
-								$("#" + options.counterId).addClass(
+								$(options.counterSelector).addClass(
 										options.alertClass);
 							} else {
-								$("#" + options.counterId).removeClass(
+								$(options.counterSelector).removeClass(
 										options.alertClass);
 							}
 						}
