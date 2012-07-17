@@ -8,9 +8,3 @@ Simple plugin to limit the value of a textarea or text input updating at the sam
    	 	counterSelector: "#counter",
  	   	alertClass: "warning"
 	}); 
-
-
-TODO
----
-  * better support to reset functions
-  * add customizable warning level
