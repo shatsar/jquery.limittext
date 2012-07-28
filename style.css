@@ -1,3 +1,7 @@
 #counter.warning {
 	color: orange;
 }
+
+#counter.limit {
+	color: red;
+}

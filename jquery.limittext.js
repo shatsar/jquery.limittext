@@ -3,7 +3,7 @@
 		var defaults = {
 			limit : 200,
 			counterSelector : false,
-			alertClass : false
+			warningLevel : 10
 		}
 		var options = $.extend(defaults, options);
 
@@ -30,10 +30,12 @@
 			if (options.counterSelector != false) {
 				var remaining = options.limit - currentTextLength;
 				$(options.counterSelector).html(remaining);
-				if (remaining <= 10) {
-					$(options.counterSelector).addClass(options.alertClass);
+				if(remaining == 0) {
+					$(options.counterSelector).trigger('limittext-limit');
+				} else if (remaining <= options.warningLevel) {
+					$(options.counterSelector).trigger('limittext-warning');
 				} else {
-					$(options.counterSelector).removeClass(options.alertClass);
+					$(options.counterSelector).trigger('limittext-ok');
 				}
 			}
 		}

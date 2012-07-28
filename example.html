@@ -22,6 +22,10 @@
 			   	 	counterSelector: "#counter",
 			 	   	alertClass: "warning"
 				}); 
+				
+				$('#counter').bind('limittext-limit', function() { $(this).removeClass("warning").addClass("limit")});
+				$('#counter').bind('limittext-warning', function() { $(this).addClass("warning")});
+				$('#counter').bind('limittext-ok', function() { $(this).removeClass("warning")});
 			});
 			
 		</script>
